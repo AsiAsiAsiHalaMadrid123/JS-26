@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            border: none;
+            background-color: rgb(216, 151, 29);
+            width: 25vw;
+            text-align: left;
+            padding: 15px;
+        }
+        div{
+            width: 25vw;
+            background-color: rgb(255, 200, 97);
+            display: none;
+        }
+        i{
+            margin-left: 80%;
+            transition: 0.4s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button id="b1" onclick="f1()">Section 1 <i id="i1" class="fa-solid fa-caret-down"></i></button> <br>
+    <div class="item1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas debitis expedita, molestiae fuga minima et quos quaerat consectetur. Totam quas fugit amet? Soluta hic tempore, aliquam, fuga dolor impedit expedita, error porro perferendis nihil quis earum consequatur voluptates at voluptatibus temporibus pariatur sint itaque facilis.</p></div>
+    <button id="b2" onclick="f2()">Section 2 <i id="i2" class="fa-solid fa-caret-down"></i></button> <br>
+    <div class="item2"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas debitis expedita, molestiae fuga minima et quos quaerat consectetur. Totam quas fugit amet? Soluta hic tempore, aliquam, fuga dolor impedit expedita, error porro perferendis nihil quis earum consequatur voluptates at voluptatibus temporibus pariatur sint itaque facilis.</p></div>
+    <button id="b3" onclick="f3()">Section 3 <i id="i3" class="fa-solid fa-caret-down"></i></button> <br>
+    <div class="item3"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas debitis expedita, molestiae fuga minima et quos quaerat consectetur. Totam quas fugit amet? Soluta hic tempore, aliquam, fuga dolor impedit expedita, error porro perferendis nihil quis earum consequatur voluptates at voluptatibus temporibus pariatur sint itaque facilis.</p></div>
+    <script>
+        function f1() {
+            function acil1() {
+                document.querySelector(".item1").style.display = "block";
+                document.querySelector("#i1").style.transform = "rotate(180deg)";
+            }
+            function baglan1() {
+                document.querySelector(".item1").style.display = "none";
+                document.querySelector("#i1").style.transform = "rotate(0deg)";
+            }
+            document.querySelector(".item1").style.display = "block";
+            document.querySelector("#i1").style.transform = "rotate(180deg)";
+            if (document.querySelector(".item1").style.display == "block") {
+                document.querySelector("#b1").addEventListener("click", baglan1);
+            } 
+            if (document.querySelector(".item1").style.display == "none") {
+                document.querySelector("#b1").addEventListener("click", acil1);
+            }
+            }
+        function f2() {
+            document.querySelector(".item2").style.display = "block";
+            document.querySelector("#i2").style.transform = "rotate(180deg)";
+            if (document.querySelector(".item2").style.display == "block") {
+                document.querySelector("#b2").addEventListener("click", ()=> {
+                    document.querySelector(".item2").style.display = "none";
+                    document.querySelector("#i2").style.transform = "rotate(0deg)";
+                })
+            } 
+            if (document.querySelector(".item2").style.display == "none") {
+                document.querySelector("#b2").addEventListener("click", ()=> {
+                    document.querySelector(".item2").style.display = "block";
+                    document.querySelector("#i2").style.transform = "rotate(180deg)";
+                })
+            }
+        }
+        function f3() {
+            document.querySelector(".item3").style.display = "block";
+            document.querySelector("#i3").style.transform = "rotate(180deg)";
+            if (document.querySelector(".item3").style.display == "block") {
+                document.querySelector("#b3").addEventListener("click", ()=> {
+                    document.querySelector(".item3").style.display = "none";
+                    document.querySelector("#i3").style.transform = "rotate(0deg)";
+                })
+            } 
+            if (document.querySelector(".item3").style.display == "none") {
+                document.querySelector("#b3").addEventListener("click", ()=> {
+                    document.querySelector(".item3").style.display = "block";
+                    document.querySelector("#i3").style.transform = "rotate(180deg)";
+                })
+            }
+        }
+    </script>
+</body>
+</html>
